@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexander Balashov | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Alexander Balashov</div>
+      <div class="toggle-theme" onclick="toggleTheme()">🌓</div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Hi, I'm Alexander Balashov</h1>
+    <p>A passionate developer building awesome projects.</p>
+    <a href="resume.pdf" download class="btn">Download Resume</a>
+  </section>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>Write a brief bio here. Who you are, what you do, and what you love working on.</p>
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-card">
+        <h3>Project Title</h3>
+        <p>Description of the project.</p>
+        <a href="#">View Project</a>
+      </div>
+      <!-- Add more project cards -->
+    </div>
+  </section>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>Postgres</li>
+      <li>Git</li>
+      <li>Docker</li>
+      <li>AWS</li>
+      <li>Linux</li>
+      <!-- Add more skills -->
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Alexander Balashov" required />
+      <input type="email" name="email" placeholder="alexbalashov02@gmail.com" required />
+      <textarea name="message" placeholder="I'm interested in your services" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div class="social">
+      <a href="https://github.com/alaex777" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/alexander-balashov-922098216" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Alexander Balashov. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+<!-- style.css -->
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #111111;
+    --accent: #007bff;
+  }
+
+  [data-theme="dark"] {
+    --bg: #111111;
+    --text: #f0f0f0;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: var(--accent);
+    color: white;
+  }
+
+  .hero {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  section {
+    padding: 2rem;
+  }
+
+  .project-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+  }
+
+  form input, form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  form button {
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .social a {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: var(--accent);
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #f5f5f5;
+  }
+</style>
+
+<!-- script.js -->
+<script>
+  function toggleTheme() {
+    const current = document.body.getAttribute('data-theme');
+    document.body.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+  }
+
+  // Optional: set default theme
+  document.body.setAttribute('data-theme', 'light');
+</script>
+
